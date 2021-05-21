@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons> 
+    <ion-title>Agregar Productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeXs="12" col-4 no-padding>
+        <div class="container-test">
+          <ion-card class="fixline">
+            <img src="../../../assets/Image/delivery.svg" class="icon"/>
+            <ion-card-title class="text">Agregar Productos</ion-card-title>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="container">
+    <ion-item class="head">
+      <ion-label>Nombre</ion-label>
+      <ion-label slot="end">Cantidad</ion-label>
+    </ion-item>
+    <form [formGroup]="AddItems" (ngSubmit)="onSave(AddItems.value)">
+      <ion-item>
+        <ion-label>Fecha: </ion-label>
+        <ion-input class="total" type="text" formControlName="fecha"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Adaptador de carro carga rápida</ion-label>
+        <ion-input class="total" type="text" formControlName="ACR"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cable Android</ion-label>
+        <ion-input class="total" type="text" formControlName="CA"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cable Iphone</ion-label>
+        <ion-input class="total" type="text" formControlName="CI"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cable auxiliar</ion-label>
+        <ion-input class="total" type="text" formControlName="CAX"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cable tipo c</ion-label>
+        <ion-input class="total" type="text" formControlName="CTC"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cubo carga rápida</ion-label>
+        <ion-input class="total" type="text" formControlName="CCR"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cubo de IPhone</ion-label>
+        <ion-input class="total" type="text" formControlName="CBI"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Manos libres Android</ion-label>
+        <ion-input class="total" type="text" formControlName="MLA"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Manos libres IPhone</ion-label>
+        <ion-input class="total" type="text" formControlName="MLI"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Manos libres Samsung</ion-label>
+        <ion-input class="total" type="text" formControlName="MLS"></ion-input>
+      </ion-item>
+      <ion-button type="submit" expand="block">Llenar</ion-button>
+    </form>
+  </div>
+</ion-content>

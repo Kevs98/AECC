@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="addClient()">
+        <ion-icon name="person-add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>clientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeXs="12" col-4 no-padding>
+        <div class="container-test">
+          <ion-card class="fixline">
+            <img src="../../../assets/Image/customer-review.svg" class="icon"/>
+            <ion-card-title class="text">Lista de Clientes</ion-card-title>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="container">
+    <ion-list *ngFor="let client of clientes">
+      <ion-item routerLink="/clientdetail/{{client.id}}">
+        <ion-avatar slot="start">
+          <img src="../../../assets/Image/clients.svg">
+        </ion-avatar>
+        <ion-label>{{client.nombre}} {{client.apellido}}</ion-label>
+        <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

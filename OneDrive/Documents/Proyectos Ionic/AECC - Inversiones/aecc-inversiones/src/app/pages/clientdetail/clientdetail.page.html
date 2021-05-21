@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles del Cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <img src="../../../assets/Image/clients.svg" class="image"> <br> <br>
+    <ion-label class="name">
+      Información del Cliente
+    </ion-label>
+</div>
+<div class="container">
+  <ion-item>
+    <ion-label>Nombre: </ion-label>
+    <ion-label class="end">{{client.nombre}} {{client.apellido}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Numero de Identidad: </ion-label>
+    <ion-label class="end">{{client.identidad}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Telefono: </ion-label>
+    <ion-label class="end">{{client.telefono}}</ion-label>
+    <ion-button class="green" color="success" slot="end"><ion-icon class="white" name="call"></ion-icon></ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-label>Direccion: </ion-label>
+    <ion-label class="end">{{client.direccion}}</ion-label>
+    <ion-button class="green" slot="end"><ion-icon class="white" name="navigate"></ion-icon></ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-label>Tipo de Servicio: </ion-label>
+    <ion-label class="end">{{client.tipo}}</ion-label>
+  </ion-item>
+  <ion-button (click)="delete()" color="danger" expand="block"><ion-icon class="white" name="trash"></ion-icon>&nbsp;Eliminar Cliente</ion-button>
+  <ion-button routerLink="/additemtoclient/{{cid}}" color="secondary" expand="block"><ion-icon class="white" name="cube"></ion-icon>&nbsp;LLenar Caja</ion-button>
+  <ion-button expand="block" routerLink="/clienthistory/{{client.identidad}}/{{client.tipo}}"><ion-icon class="white" name="eye"></ion-icon>&nbsp;Ver Historial</ion-button>
+</div>
+</ion-content>

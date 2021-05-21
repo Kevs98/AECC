@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+      <img src="../../../assets/Image/checklist.svg" class="image"> <br> <br>
+      <ion-label class="name">
+        Detalles del Producto 
+      </ion-label>
+  </div>
+  <ion-list>
+    <ion-item>
+      <ion-label>Nombre:</ion-label>
+      <ion-label class="end" slot="end">{{Inventario.nombre}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Cantidad Disponible:</ion-label>
+      <ion-label class="end" slot="end">{{Inventario.cantidad}} Unidades</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Precio Contado:</ion-label>
+      <ion-label class="end" slot="end">{{Inventario.precioU}} Lps</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Precio Consignacion:</ion-label>
+      <ion-label class="end" slot="end">{{Inventario.consignacion}} Lps</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

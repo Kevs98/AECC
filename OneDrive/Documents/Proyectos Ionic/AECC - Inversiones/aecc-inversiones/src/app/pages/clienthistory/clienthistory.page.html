@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Historial</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeXs="12" col-4 no-padding>
+        <div class="container-test">
+          <ion-card class="fixline">
+            <img src="../../../assets/Image/clock.svg" class="icon"/>
+            <ion-card-title class="text">Historial</ion-card-title>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="container">
+    <ion-list *ngFor="let hst of Ah">
+      <ion-item routerLink="/historydetail/{{hst.id}}/{{tipo}}">
+        <ion-label>Fecha: </ion-label>
+        <ion-label class="end">{{hst.fecha}}</ion-label>
+        <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

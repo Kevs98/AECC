@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeXs="12" col-4 no-padding>
+        <div class="container-test">
+          <ion-card class="fixline">
+            <img src="../../../assets/Image/details.svg" class="icon"/>
+            <ion-card-title class="text">Detalles</ion-card-title>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="container">
+    <ion-list>
+      <ion-item>
+        <ion-label class="center">{{HistoryBC.NAME}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Adaptador de carro carga rápida</ion-label>
+        <ion-label class="end">{{HistoryBC.ACR}} X {{ACRPU}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cable Android</ion-label>
+        <ion-label class="end">{{HistoryBC.CA}} X {{CAPU}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cable Iphone</ion-label>
+        <ion-label class="end">{{HistoryBC.CI}} X {{CIPU}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cable auxiliar</ion-label>
+        <ion-label class="end">{{HistoryBC.CAX}} X {{CAXPU}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cable tipo c</ion-label>
+        <ion-label class="end">{{HistoryBC.CTC}} X {{CTCPU}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cubo carga rápida</ion-label>
+        <ion-label class="end">{{HistoryBC.CCR}} X {{CCRPU}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cubo de IPhone</ion-label>
+        <ion-label class="end">{{HistoryBC.CBI}} X {{CBIPU}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Manos libres Android</ion-label>
+        <ion-label class="end">{{HistoryBC.MLA}} X {{MLAPU}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Manos libres IPhone</ion-label>
+        <ion-label class="end">{{HistoryBC.MLI}} X {{MLIPU}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Manos libres Samsung</ion-label>
+        <ion-label class="end">{{HistoryBC.MLS}} X {{MLSPU}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Total: </ion-label>
+        <ion-label class="end">{{total}}&nbsp;Lps</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

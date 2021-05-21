@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cierres Disponibles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeXs="12" col-4 no-padding>
+        <div class="container-test">
+          <ion-card class="fixline">
+            <img src="../../../assets/Image/padlock.svg" class="icon"/>
+            <ion-card-title class="text">Cierres Disponibles</ion-card-title>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="container">
+    <ion-item>
+      <ion-label>Seleccionar Cierre</ion-label>
+      <ion-select slot="end">
+        <ion-select-option *ngFor="let cierre of cierres" value="{{cierre.fecha}}">{{cierre.fecha}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+      <div class="footer" *ngFor="let cierre of cierres">
+        <ion-button expand="block" class="close" routerLink="/closebox/{{cierre.id}}">
+          <ion-icon name="close"></ion-icon> Hacer Cierre.
+        </ion-button>
+      </div> 
+  </div>
+</ion-content>
