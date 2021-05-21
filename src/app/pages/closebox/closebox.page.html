@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles del cierre</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="limiter">
+    <div class="container-table100">
+      <div class="wrap-table100">
+        <div class="table">
+          <tbody>
+            <tr>
+              <th class="row header">Producto</th>
+              <th class="row header">Dejado</th>
+              <th class="row header">Vendido</th>
+              <th class="row header">Total</th>
+            </tr>
+            <tr>
+              <td class="cell">Cubo carga rápida</td>
+              <td class="cell center">{{cierre.CCR}}</td>
+              <td class="cell center"><ion-input id="ccr" placeholder="Cantidad"></ion-input></td>
+              <td class="cell center">{{tccr}}</td>
+            </tr>
+            <tr>
+              <td class="cell">Cable Iphone</td>
+              <td class="cell center">{{cierre.CI}}</td>
+              <td class="cell center"><ion-input id="ci" placeholder="Cantidad"></ion-input></td>
+              <td class="cell center">{{tci}}</td>
+            </tr>
+            <tr>
+              <td class="cell">Cable Android</td>
+              <td class="cell center">{{cierre.CA}}</td>
+              <td class="cell center"><ion-input id="ca" placeholder="Cantidad"></ion-input></td>
+              <td class="cell center">{{tca}}</td>
+            </tr>
+            <tr>
+              <td class="cell">Cubo Iphone</td>
+              <td class="cell center">{{cierre.CBI}}</td>
+              <td class="cell center"><ion-input id="cbi" placeholder="Cantidad"></ion-input></td>
+              <td class="cell center">{{tcbi}}</td>
+            </tr>
+            <tr>
+              <td class="cell">Manos Libres Iphone</td>
+              <td class="cell center">{{cierre.MLI}}</td>
+              <td class="cell center"><ion-input id="mli" placeholder="Cantidad"></ion-input></td>
+              <td class="cell center">{{tmli}}</td>
+            </tr>
+            <tr>
+              <td class="cell">Adaptador Carro</td>
+              <td class="cell center">{{cierre.ACR}}</td>
+              <td class="cell center"><ion-input id="acr" placeholder="Cantidad"></ion-input></td>
+              <td class="cell center">{{tacr}}</td>
+            </tr>
+            <tr>
+              <td class="cell">Manos Libres Android</td>
+              <td class="cell center">{{cierre.MLA}}</td>
+              <td class="cell center"><ion-input id="mla" placeholder="Cantidad"></ion-input></td>
+              <td class="cell center">{{tmla}}</td>
+            </tr>
+            <tr>
+              <td class="cell">Cable Tipo C</td>
+              <td class="cell center">{{cierre.CTC}}</td>
+              <td class="cell center"><ion-input id="ctc" placeholder="Cantidad"></ion-input></td>
+              <td class="cell center">{{tctc}}</td>
+            </tr>
+            <tr>
+              <td class="cell">Cable Auxiliar</td>
+              <td class="cell center">{{cierre.CAX}}</td>
+              <td class="cell center"><ion-input id="cax" placeholder="Cantidad"></ion-input></td>
+              <td class="cell center">{{tcax}}</td>
+            </tr>
+            <tr>
+              <td class="cell">Manos Libres Samsung</td>
+              <td class="cell center">{{cierre.MLS}}</td>
+              <td class="cell center"><ion-input id="mls" placeholder="Cantidad"></ion-input></td>
+              <td class="cell center">{{tmls}}</td>
+            </tr>
+            <tr>
+              <th class="row header">Total</th>
+              <th class="row header"></th>
+              <th class="row header"></th>
+              <th class="row header">{{total}}</th>
+            </tr>
+          </tbody>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <ion-button expand="block" (click)="Total()"> Cerrar </ion-button> <br>
+      <ion-button expand="block" (click)="continue()">Continuar</ion-button>
+    </div>
+  </div>
+</ion-content>

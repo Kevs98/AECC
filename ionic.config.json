@@ -1,0 +1,8 @@
+{
+  "name": "AECC - Inversiones",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>inventario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div >
+    <ion-item>
+      <ion-label class="center">Nombre</ion-label>
+      <ion-label slot="end" class="center">Cantidad</ion-label>
+    </ion-item>
+    <ion-list *ngFor="let inv of Inventario">
+      <ion-item routerLink="/itemdetails/{{inv.id}}">
+        <ion-label>
+          {{inv.nombre}}
+        </ion-label>
+        <ion-label slot="end" class="price">
+          {{inv.cantidad}}
+        </ion-label>
+        <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

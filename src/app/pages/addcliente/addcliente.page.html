@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agregar Cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeXs="12" col-4 no-padding>
+        <div class="container-test">
+          <ion-card class="fixline">
+            <img src="../../../assets/Image/follow.svg" class="icon"/>
+            <ion-card-title class="text">Agregar un Cliente</ion-card-title>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <form [formGroup]="AddClient" (ngSubmit)="onSave(AddClient.value)">
+    <div class="container">
+      <ion-item>
+        <ion-label>Nombre: </ion-label>
+        <ion-input type="text" formControlName="nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Apellido: </ion-label>
+        <ion-input type="text" formControlName="apellido"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Identidad: </ion-label>
+        <ion-input type="text" formControlName="identidad"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Telefono: </ion-label>
+        <ion-input type="text" formControlName="telefono"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Direccion: </ion-label>
+        <ion-input type="text" formControlName="direccion"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Ubicacion: </ion-label>
+        <ion-button slot="end" (click)="locate()"><ion-icon name="navigate"></ion-icon>&nbsp;Obtener ubicacion</ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-label>Tipo: </ion-label>
+        <ion-select formControlName="tipo">
+          <ion-select-option value="Consignacion">Consignacion</ion-select-option>
+          <ion-select-option value="Contado">Contado</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-button type="submit" expand="block"><ion-icon name="send"></ion-icon>&nbsp;Guardar</ion-button>
+    </div>
+  </form>
+</ion-content>
